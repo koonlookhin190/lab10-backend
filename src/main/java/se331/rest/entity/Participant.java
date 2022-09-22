@@ -3,6 +3,7 @@ package se331.rest.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 @Data
 @Builder
@@ -16,6 +17,7 @@ public class Participant {
     Long id;
     String name;
     String telNo;
+
     @ManyToMany
     List<Event> eventHistory;
 }
