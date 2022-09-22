@@ -9,13 +9,9 @@ import javax.persistence.Id;
 
 @Data
 @Builder
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 public class EventOrganizerDTO {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @EqualsAndHashCode.Exclude
     Long id;
     String name;
 }
