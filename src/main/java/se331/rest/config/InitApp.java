@@ -36,7 +36,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
         org3 = organizerRepository.save(Organizer.builder()
                         .name("ChiangMai").build());
         Participant pati1,pati2,pati3,pati4,pati5;
-        List<Event> eventList ;
+
         pati1 = participantRepository.save(Participant.builder()
                 .name("Hin1")
                 .telNo("001")
@@ -68,10 +68,11 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .time("3.00-4.00 pm.")
                 .petAllowed(false)
                 .build());
-        eventList = new ArrayList<>();
-        eventList.add(tempEvent);
-        pati1.setEventHistory(eventList);
-        //eventRepository.save(Event.builder()
+        pati1.getEventHistory().add(tempEvent);
+        pati2.getEventHistory().add(tempEvent);
+        pati3.getEventHistory().add(tempEvent);
+        pati4.getEventHistory().add(tempEvent);
+        pati5.getEventHistory().add(tempEvent);
         tempEvent.setOrganizer(org1);
         org1.getOwnEvents().add(tempEvent);
 
@@ -85,7 +86,9 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .time("8.00am-4.00 pm.")
                 .petAllowed(false)
                 .build());
-        //eventRepository.save(Event.builder()
+        pati1.getEventHistory().add(tempEvent);
+        pati2.getEventHistory().add(tempEvent);
+        pati3.getEventHistory().add(tempEvent);
         tempEvent.setOrganizer(org1);
         org1.getOwnEvents().add(tempEvent);
 
@@ -101,8 +104,11 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .build());
 
         //eventRepository.save(Event.builder()
+        pati1.getEventHistory().add(tempEvent);
+        pati2.getEventHistory().add(tempEvent);
+        pati3.getEventHistory().add(tempEvent);
         tempEvent.setOrganizer(org2);
-
+        org2.getOwnEvents().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
                 .category("Cultural")
                 .title("Songkran")
@@ -112,6 +118,12 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .time("10.00am - 6.00 pm.")
                 .petAllowed(true)
                 .build());
+
+        pati1.getEventHistory().add(tempEvent);
+        pati2.getEventHistory().add(tempEvent);
+        pati3.getEventHistory().add(tempEvent);
+        pati4.getEventHistory().add(tempEvent);
+        pati5.getEventHistory().add(tempEvent);
 
         tempEvent.setOrganizer(org3);
         org3.getOwnEvents().add(tempEvent);

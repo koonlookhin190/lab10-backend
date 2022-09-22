@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.ManyToMany;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -17,5 +18,5 @@ public class ParticipantDTO {
     Long id;
     String name;
     String telNo;
-    List<Event> eventHistory;
+    List<Event> eventHistory = new ArrayList<>();
 }
