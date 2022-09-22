@@ -34,8 +34,9 @@ public class EventServiceImpl implements EventService {
         return eventDao.getEvent(id);
     }
 
-    @Transactional
+
     @Override
+    @Transactional
     public Event save(Event event) {
         Organizer organizer = organizerDao.findById(event.getOrganizer().getId()).orElse(null);
         event.setOrganizer(organizer);
