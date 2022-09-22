@@ -11,14 +11,14 @@ import java.util.Optional;
 
 @Repository
 public class OrganizerDaoImpl implements OrganizerDao{
-@Autowired
+    @Autowired
     OrganizerRepository organizerRepository;
-@Override
+    @Override
     public Page<Organizer> getOrganizer(Pageable pageRequest){
-    return organizerRepository.findAll(pageRequest);
-}
-@Override
+        return organizerRepository.findAll(pageRequest);
+    }
+    @Override
     public Optional<Organizer> findById(Long id){
-    return organizerRepository.findById(id);
-}
+        return organizerRepository.findById(id);
+    }
 }
