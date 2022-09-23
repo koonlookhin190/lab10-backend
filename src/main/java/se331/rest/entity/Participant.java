@@ -19,5 +19,6 @@ public class Participant {
     String telNo;
 
     @ManyToMany
-    List<Event> eventHistory;
+            @Builder.Default
+    List<Event> eventHistory = new ArrayList<>();
 }

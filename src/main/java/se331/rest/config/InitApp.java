@@ -85,11 +85,11 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
 
 
 //
-//        pati1.getEventHistory().add(tempEvent);
-//        pati2.getEventHistory().add(tempEvent);
-//        pati3.getEventHistory().add(tempEvent);
-//        pati4.getEventHistory().add(tempEvent);
-//        pati5.getEventHistory().add(tempEvent);
+        pati1.getEventHistory().add(tempEvent);
+        pati2.getEventHistory().add(tempEvent);
+        pati3.getEventHistory().add(tempEvent);
+        pati4.getEventHistory().add(tempEvent);
+        pati5.getEventHistory().add(tempEvent);
 
         tempEvent = eventRepository.save(Event.builder()
                 .category("Academic")
@@ -109,9 +109,9 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
 
         tempEvent.setOrganizer(org1);
         org1.getOwnEvents().add(tempEvent);
-//        pati1.getEventHistory().add(tempEvent);
-//        pati2.getEventHistory().add(tempEvent);
-//        pati3.getEventHistory().add(tempEvent);
+        pati1.getEventHistory().add(tempEvent);
+        pati2.getEventHistory().add(tempEvent);
+        pati3.getEventHistory().add(tempEvent);
 
         tempEvent = eventRepository.save(Event.builder()
                 .category("Cultural")
@@ -132,9 +132,9 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
 
         tempEvent.setOrganizer(org2);
         org2.getOwnEvents().add(tempEvent);
-//        pati1.getEventHistory().add(tempEvent);
-//        pati2.getEventHistory().add(tempEvent);
-//        pati3.getEventHistory().add(tempEvent);
+        pati1.getEventHistory().add(tempEvent);
+        pati2.getEventHistory().add(tempEvent);
+        pati3.getEventHistory().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
                 .category("Cultural")
                 .title("Songkran")
@@ -155,11 +155,11 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
 
         tempEvent.setOrganizer(org3);
         org3.getOwnEvents().add(tempEvent);
-//        pati1.getEventHistory().add(tempEvent);
-//        pati2.getEventHistory().add(tempEvent);
-//        pati3.getEventHistory().add(tempEvent);
-//        pati4.getEventHistory().add(tempEvent);
-//        pati5.getEventHistory().add(tempEvent);
+        pati1.getEventHistory().add(tempEvent);
+        pati2.getEventHistory().add(tempEvent);
+        pati3.getEventHistory().add(tempEvent);
+        pati4.getEventHistory().add(tempEvent);
+        pati5.getEventHistory().add(tempEvent);
 
     }
 }
